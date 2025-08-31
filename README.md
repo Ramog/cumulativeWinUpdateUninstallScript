@@ -8,6 +8,7 @@ If you need it to remove another update instead, the target of the script can ea
 
 Some notes: 
 - ~~I couldn't test if it actually removes the update since windows 11 never installed the update on my pc to begin with but all the info I found points to yes~~
+
   Tested in win 11 VM works well at removing the update, however entry will not be removed from update history (this is purely visual)
 - Keep in mind that this will also remove all the security patches that might have been in `KB5063878` but this preferable to the SSD-Controller issues it causes
 
