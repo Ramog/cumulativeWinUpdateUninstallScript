@@ -1,5 +1,5 @@
 # PowerShell Script to Uninstall a Specified Update
-# Couldn't verify if it works but worst case it will just not uninstall the update
+# Verified inside a VM running win 11
 # Has to be run as Administrator
 
 # As far as I understand KB5063878 is the cumaltive update that is causing the issue while KB5062660 is the security update that is linked to it but not causing the SSD issue
