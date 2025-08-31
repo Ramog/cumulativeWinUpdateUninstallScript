@@ -25,4 +25,4 @@ if ($update) {
 
 # Keyprompt so that shell window doesn't close for some usecases
 Write-Host "Press any key to continue..."
-$Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+$_ = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
