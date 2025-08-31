@@ -22,3 +22,7 @@ if ($update) {
 } else {
     Write-Host "$updateToRemove is not installed on this system." -ForegroundColor Cyan
 }
+
+# Keyprompt so that shell window doesn't close for some usecases
+Write-Host "Press any key to continue..."
+$Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
