@@ -1,12 +1,14 @@
 # Info
-This script is supposed to uninstall the Windows 11 featureupdate (KB5063878) that messes with SSD controllers by using wusa.exe, the built-in windows update-installation application.
+This script uninstalls the Windows 11 featureupdate (KB5063878) that messes with SSD controllers by using wusa.exe, the built-in windows update-installation application.
 `wusa.exe /uninstall` is designed for safe update uninstallation so it can't really break your OS.
+
+It's important to note that you still need to prevent windows to install the update by itself again. There are many guides out there on how to disable automatic windows updates.
 
 If you need it to remove another update instead, the target of the script can easily be changed by changing line 6 `$updateToRemove = "KB5063878"` to a different update you want to remove.
 
 Some notes: 
-- I couldn't test if it actually removes the update since windows 11 never installed the update on my pc to begin with but all the info I found points to yes
-- Worst case it will fail to remove the update but your system will be unchanged
+- ~~I couldn't test if it actually removes the update since windows 11 never installed the update on my pc to begin with but all the info I found points to yes~~
+  Tested in win 11 VM works well at removing the update, however entry will not be removed from update history (this is purely visual)
 - Keep in mind that this will also remove all the security patches that might have been in `KB5063878` but this preferable to the SSD-Controller issues it causes
 
 # How to execute this script
@@ -29,3 +31,5 @@ Some notes:
    Of course you need to swap out `C:\Path\To\script.ps1` with the correct path of the script
    
    It will start `script.ps1` even if your PCs global execution policy is set to not execute powershell scripts at all but most importantly it will not change any settings on your system or open any permanent loopholes
+6. After executing the script a dialog box will pop up, asking you if you want to deinstall the update. Click yes
+7. Wait for the uninstall process to finish and then restart manually to apply the changes
