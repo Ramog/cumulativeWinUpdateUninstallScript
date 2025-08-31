@@ -13,8 +13,10 @@ $update = Get-HotFix | Where-Object {$_.HotFixID -eq $updateToRemove}
 if ($update) {
     Write-Host "$updateToRemove is installed. Proceeding with uninstall..." -ForegroundColor Yellow
 
-    # Uninstall the update silently, wusa.exe is the built-in windows update-installation application 
-    wusa.exe /uninstall /kb:$kbNumber /quiet /norestart
+    # Build command to: Uninstall the update silently, wusa.exe is the built-in windows update-installation application
+    $cmd = "wusa.exe /uninstall /kb:$kbNumber /norestart"
+    # Execute previoiusly built wusa.exe command (this is done because otherwise it wouldn't interprete $kbNumber right in the command)
+    Invoke-Expression $cmd
 
     Write-Host "Uninstall command sent. Please restart your computer to complete the process." -ForegroundColor Green
 } else {
