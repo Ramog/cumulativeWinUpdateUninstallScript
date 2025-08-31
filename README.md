@@ -16,11 +16,12 @@ Some notes:
    
    Search for powershell in the startmenu, on the right side of the result window click on 'Execute as Admin'   
 3. Since you downloaded the script from a webpage you most likely have to first tell your PC that this file is safe to execute
+   
    To do this you can use the command, this will remove the "downloaded"-tag from this specific file and make it executable on your pc regardless of your System-Settings
    ```powershell
    Unblock-File -Path "C:\Path\To\script.ps1"
    ```
-4. Since Powershell comes with a built-in execution protection you need use this to start the script
+5. Since Powershell comes with a built-in execution protection you need use this to start the script
    ```powershell
    powershell -ExecutionPolicy Bypass -File "C:\Path\To\script.ps1"
    ```
