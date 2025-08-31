@@ -1,5 +1,5 @@
 # Info
-This script uninstalls the Windows 11 featureupdate (KB5063878) that messes with SSD controllers by using wusa.exe, the built-in windows update-installation application.
+This script uninstalls the Windows 11 featureupdate (KB5063878), that messes with SSD controllers, by using wusa.exe – the built-in windows update-installation application.
 `wusa.exe /uninstall` is designed for safe update uninstallation so it can't really break your OS.
 
 It's important to note that you still need to prevent windows to install the update by itself again. There are many guides out there on how to disable automatic windows updates.
