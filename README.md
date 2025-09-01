@@ -2,7 +2,7 @@
 This script uninstalls the Windows 11 featureupdate (KB5063878), that messes with SSD controllers, by using wusa.exe – the built-in windows update-installation application.
 `wusa.exe /uninstall` is designed for safe update uninstallation so it can't really break your OS.
 
-It's important to note that you still need to prevent windows to install the update by itself again. Here is a tool provided by microsoft that prevents that and can you can use for preventing the specific update to reinstall after you restarted your pc to apply the uninstall, trust me I wish I knew why it has no official description page but its the best and simplest tool to disable single windows updates \
+It's important to note that you still need to prevent windows to install the update by itself again. Here is a tool provided by microsoft that prevents that and that you can use for preventing the specific update to reinstall after you restarted your pc to apply the uninstall, trust me I wish I knew why it has no official description page but its the best and simplest tool to disable single windows updates \
 https://download.microsoft.com/download/f/2/2/f22d5fdb-59cd-4275-8c95-1be17bf70b21/wushowhide.diagcab  \
 I encurage you to throw both the link and the file into Virus Total (https://www.virustotal.com/gui/home/upload) just to be sure and to encourage best practices
 
@@ -36,3 +36,4 @@ Some notes:
    It will start `script.ps1` even if your PCs global execution policy is set to not execute powershell scripts at all but most importantly it will not change any settings on your system or open any permanent loopholes
 6. After executing the script a dialog box will pop up, asking you if you want to deinstall the update. Click yes
 7. Wait for the uninstall process to finish and then restart manually to apply the changes
+8. Now you'd use wushowhide.diagcab to block that update from installing again, do mind that this will not disable updates outright and if a new update comes out it will not affect how windows update works
