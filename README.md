@@ -27,13 +27,13 @@ Some notes:
    Unblock-File -Path "C:\Path\To\script.ps1"
    ```
    Of course you need to swap out `C:\Path\To\script.ps1` with the correct path of the script
-5. Since Powershell comes with a built-in execution protection you need use this to start the script
+4. Since Powershell comes with a built-in execution protection you need use this to start the script
    ```powershell
    powershell -ExecutionPolicy Bypass -File "C:\Path\To\script.ps1"
    ```
    Of course you need to swap out `C:\Path\To\script.ps1` with the correct path of the script
    
    It will start `script.ps1` even if your PCs global execution policy is set to not execute powershell scripts at all but most importantly it will not change any settings on your system or open any permanent loopholes
-6. After executing the script a dialog box will pop up, asking you if you want to deinstall the update. Click yes
-7. Wait for the uninstall process to finish and then restart manually to apply the changes
-8. Now you'd use wushowhide.diagcab to block that update from installing again, do mind that this will not disable updates outright and if a new update comes out it will not affect how windows update works
+5. After executing the script a dialog box will pop up, asking you if you want to deinstall the update. Click yes
+6. Wait for the uninstall process to finish and then restart manually to apply the changes
+7. Now you'd use wushowhide.diagcab to block that update from installing again, do mind that this will not disable updates outright and if a new update comes out it will not affect how windows update works
